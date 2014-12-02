@@ -4,5 +4,7 @@
     <string name="app_name">Guildford Musalla</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="mainpage_title">Guildford Islamic Cultural Centre</string>
+    <string name="prTimes_heading">Today's Prayer Times</string>
 
 </resources>
