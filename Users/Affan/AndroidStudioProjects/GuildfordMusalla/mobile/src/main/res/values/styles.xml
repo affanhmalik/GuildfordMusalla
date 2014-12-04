@@ -5,4 +5,15 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="pr_table_col0">
+        <item name="android:layout_gravity">fill_horizontal</item>
+        <item name="android:textSize">@dimen/pr_table_textsize</item>
+        <item name="android:layout_marginEnd">60dp</item>
+    </style>
+
+    <style name="pr_table_col1">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textSize">@dimen/pr_table_textsize</item>
+    </style>
+
 </resources>
