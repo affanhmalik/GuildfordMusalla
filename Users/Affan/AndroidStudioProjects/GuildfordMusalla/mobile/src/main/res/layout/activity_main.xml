@@ -37,10 +37,18 @@
         android:layout_marginBottom="@dimen/activity_vertical_margin"
         />
 
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_gravity="center_horizontal"
+
+        android:visibility="gone" />
+
     <GridLayout
 
         android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:columnCount="2"
         android:layout_marginTop="@dimen/activity_vertical_margin"
@@ -123,7 +131,19 @@
 
         </GridLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        />
 
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Magic"
+        android:id="@+id/button1"
+        android:layout_gravity="center_horizontal" />
 
 
 </LinearLayout>

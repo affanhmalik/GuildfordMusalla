@@ -5,7 +5,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="mainpage_title">Guildford Islamic Cultural Centre</string>
-    <string name="prTimes_heading">Today's Prayer Times</string>
+    <string name="prTimes_heading">Today\'s Prayer Times</string>
     <string-array name="prayerNames">
         <item>Fajr</item>
         <item>Zuhr</item>

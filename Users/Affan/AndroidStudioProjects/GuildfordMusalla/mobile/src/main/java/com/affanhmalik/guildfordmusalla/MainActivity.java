@@ -5,14 +5,33 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ProgressBar;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
+
+    ProgressBar loader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        loader = (ProgressBar) findViewById(R.id.progressBar);
+
+//        Button click test
+
+        final Button button = (Button) findViewById(R.id.button1);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sampleDataServiceImplementation();
+            }
+        });
     }
 
 
@@ -53,18 +72,40 @@ public class MainActivity extends ActionBarActivity {
         @Override
         protected void onPreExecute() {
             /* Maybe do a toast saying "contacting server for data" */
+            loader.setVisibility(View.VISIBLE);
+            Toast.makeText(getApplicationContext(), "Beginning...", Toast.LENGTH_SHORT).show();
         }
 
         @Override
         protected String doInBackground(String... params) {
             /* Do whatever and then send the result which is picked up by onPostExecute */
             String a = "asdf";
+
+            /* Publish progress part */
+
+            for (int i=0; i < 10 ; i++) {
+                publishProgress("Yada yada yada" + i);
+
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+
+
             return a;
         }
 
         @Override
         protected void onPostExecute(String s) {
-            super.onPostExecute(s);
+            loader.setVisibility(View.GONE);
+            Toast.makeText(getApplicationContext(), "s", Toast.LENGTH_SHORT).show();
+        }
+
+        @Override
+        protected void onProgressUpdate(String... values) {
+
         }
     }
 }
