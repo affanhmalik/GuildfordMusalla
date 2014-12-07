@@ -6,14 +6,38 @@
     </style>
 
     <style name="pr_table_col0">
-        <item name="android:layout_gravity">fill_horizontal</item>
+        <item name="android:layout_gravity">center</item>
+
         <item name="android:textSize">@dimen/pr_table_textsize</item>
-        <item name="android:layout_marginEnd">60dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+
     </style>
 
     <style name="pr_table_col1">
-        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_gravity">center</item>
         <item name="android:textSize">@dimen/pr_table_textsize</item>
+        <item name="android:layout_marginRight">20dp</item>
+    </style>
+
+
+
+    <style name="alert_timer_style">
+        <item name="android:src">@drawable/alert_timer</item>
+        <item name="android:layout_width">51dp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+
+    </style>
+
+    <style name="alert_timelength_style">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">@dimen/pr_table_textsize</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:visibility">invisible</item>
     </style>
 
 </resources>

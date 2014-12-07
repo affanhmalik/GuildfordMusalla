@@ -20,18 +20,20 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        loader = (ProgressBar) findViewById(R.id.progressBar);
+//        loader = (ProgressBar) findViewById(R.id.progressBar);
 
 //        Button click test
 
-        final Button button = (Button) findViewById(R.id.button1);
+//        final Button button = (Button) findViewById(R.id.button1);
 
+/*
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 sampleDataServiceImplementation();
             }
         });
+*/
     }
 
 
