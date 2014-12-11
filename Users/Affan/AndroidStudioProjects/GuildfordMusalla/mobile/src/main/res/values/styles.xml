@@ -22,7 +22,8 @@
 
 
     <style name="alert_timer_style">
-        <item name="android:src">@drawable/alert_timer</item>
+        <item name="android:src">@drawable/ic_action_alarms</item>
+
         <item name="android:layout_width">51dp</item>
         <item name="android:layout_height">44dp</item>
         <item name="android:adjustViewBounds">true</item>
