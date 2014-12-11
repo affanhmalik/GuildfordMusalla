@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:background="@android:color/background_light"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/abc_dropdownitem_text_padding_left"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:src="@drawable/logo"
+            android:background="@android:color/transparent"
+            android:adjustViewBounds="true"
+            android:maxHeight="60dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/mainpage_title"
+            android:id="@+id/mainpage_title"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_weight="6.56" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginRight="@dimen/abc_dropdownitem_text_padding_left"
+        android:layout_marginLeft="25dp"
+
+        
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/primary_dark_material_dark"
+
+            android:textSize="@dimen/pr_table_textsize"
+            android:text="@string/prTimes_heading"
+            android:id="@+id/mainpage_subtitle"
+
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+
+            />
+
+
+        <GridLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:columnCount="4"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:nestedScrollingEnabled="true"
+            >
+
+            <TextView
+                style="@style/pr_table_col0"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:text="@string/pr1"
+
+                />
+
+            <TextView
+                style="@style/pr_table_col0"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:text="@string/pr2"
+
+                />
+            <TextView
+                style="@style/pr_table_col0"
+                android:layout_column="0"
+                android:layout_row="2"
+                android:text="@string/pr3"
+
+                />
+            <TextView
+                style="@style/pr_table_col0"
+                android:layout_column="0"
+                android:layout_row="3"
+                android:text="@string/pr4"
+
+                />
+            <TextView
+                style="@style/pr_table_col0"
+                android:layout_column="0"
+                android:layout_row="4"
+                android:text="@string/pr5"
+
+                />
+
+            <TextView
+                style="@style/pr_table_col1"
+                android:layout_column="1"
+                android:layout_row="0"
+                android:text="@string/prt1"
+                />
+
+            <TextView
+                style="@style/pr_table_col1"
+                android:layout_column="1"
+                android:layout_row="1"
+                android:text="@string/prt2"
+                />
+
+            <TextView
+                style="@style/pr_table_col1"
+                android:layout_column="1"
+                android:layout_row="2"
+                android:text="@string/prt3"
+                />
+
+            <TextView
+                style="@style/pr_table_col1"
+                android:layout_column="1"
+                android:layout_row="3"
+                android:text="@string/prt4"
+                />
+
+            <TextView
+                style="@style/pr_table_col1"
+                android:layout_column="1"
+                android:layout_row="4"
+                android:text="@string/prt5"
+                />
+
+
+            <ImageButton
+                style="@style/alert_timer_style"
+                android:id="@+id/timer1"
+                android:layout_column="2"
+                android:layout_row="0"
+                />
+
+            <ImageButton
+                style="@style/alert_timer_style"
+
+                android:id="@+id/timer2"
+                android:layout_column="2"
+                android:layout_row="1" />
+
+            <ImageButton
+                style="@style/alert_timer_style"
+                android:id="@+id/timer3"
+                android:layout_column="2"
+                android:layout_row="2"
+                />
+
+            <ImageButton
+                style="@style/alert_timer_style"
+                android:id="@+id/timer4"
+                android:layout_column="2"
+                android:layout_row="3"
+                />
+
+            <ImageButton
+                style="@style/alert_timer_style"
+                android:id="@+id/timer5"
+                android:layout_column="2"
+                android:layout_row="4"
+                />
+
+            <TextView
+                style="@style/alert_timelength_style"
+                android:id="@+id/alert_time1"
+                android:layout_column="3"
+                android:layout_row="0"
+                />
+
+            <TextView
+                style="@style/alert_timelength_style"
+                android:id="@+id/alert_time2"
+                android:layout_column="3"
+                android:layout_row="1"
+                />
+
+            <TextView
+                style="@style/alert_timelength_style"
+                android:id="@+id/alert_time3"
+                android:layout_column="3"
+                android:layout_row="2"
+                />
+
+            <TextView
+                style="@style/alert_timelength_style"
+                android:id="@+id/alert_time4"
+                android:layout_column="3"
+                android:layout_row="3"
+                />
+
+            <TextView
+                style="@style/alert_timelength_style"
+                android:id="@+id/alert_time5"
+                android:layout_column="3"
+                android:layout_row="4"
+
+                />
+
+
+        </GridLayout>
+
+
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dataSample"
+            android:text="This is sample text for this box"
+
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:id="@+id/getData"
+            android:text="GET"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
