@@ -88,6 +88,7 @@
 
         <TextView
             style="@style/pr_table_col1"
+            android:id="@+id/fajrTime"
             android:layout_column="1"
             android:layout_row="0"
             android:text="@string/prt1"
@@ -95,6 +96,7 @@
 
         <TextView
             style="@style/pr_table_col1"
+            android:id="@+id/zuhrTime"
             android:layout_column="1"
             android:layout_row="1"
             android:text="@string/prt2"
@@ -102,6 +104,7 @@
 
         <TextView
             style="@style/pr_table_col1"
+            android:id="@+id/asrTime"
             android:layout_column="1"
             android:layout_row="2"
             android:text="@string/prt3"
@@ -109,6 +112,7 @@
 
         <TextView
             style="@style/pr_table_col1"
+            android:id="@+id/maghribTime"
             android:layout_column="1"
             android:layout_row="3"
             android:text="@string/prt4"
@@ -116,6 +120,7 @@
 
         <TextView
             style="@style/pr_table_col1"
+            android:id="@+id/ishaTime"
             android:layout_column="1"
             android:layout_row="4"
             android:text="@string/prt5"

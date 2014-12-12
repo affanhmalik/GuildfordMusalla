@@ -15,10 +15,25 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONException;
+
+import java.util.List;
+
 
 public class MainActivity extends ActionBarActivity {
 
     ProgressBar loader;
+    TextView resultBox;
+    TextView fajrTime;
+    TextView zuhrTime;
+    TextView asrTime;
+    TextView maghribTime;
+    TextView ishaTime;
+    DataModel sched;
+
+
+    List<DataModel> prSchedule;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,18 +125,55 @@ public class MainActivity extends ActionBarActivity {
         protected String doInBackground(String... params) {
             /* Do whatever and then send the result which is picked up by onPostExecute */
 
+            // Get JSON data from API
             String content = HttpManager.getData(params[0]);
 
+
+
             return content;
+
+
 
 
         }
 
         @Override
-        protected void onPostExecute(String s) {
-            TextView resultBox = (TextView) findViewById(R.id.dataSample);
+        protected void onPostExecute(String content) {
 
-            resultBox.setText(s);
+            //Parse the data
+
+            SchedJSONparser parseSched = new SchedJSONparser();
+
+            try {
+                sched = parseSched.parseFeed(content);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+            fajrTime = (TextView) findViewById(R.id.fajrTime);
+            zuhrTime = (TextView) findViewById(R.id.zuhrTime);
+            asrTime = (TextView) findViewById(R.id.asrTime);
+            maghribTime = (TextView) findViewById(R.id.maghribTime);
+            ishaTime = (TextView) findViewById(R.id.ishaTime);
+
+            /*fajrTime.setText(sched.getFajr());
+            zuhrTime.setText(sched.getZuhr());
+            asrTime.setText(sched.getAsr());
+            maghribTime.setText(sched.getMaghrib());
+            ishaTime.setText(sched.getIsha());*/
+
+
+            fajrTime.setText("11:11");
+            zuhrTime.setText("11:11");
+            asrTime.setText("11:11");
+            maghribTime.setText("11:11");
+            ishaTime.setText("11:11");
+
+
+            //Test data input
+            resultBox = (TextView) findViewById(R.id.dataSample);
+            resultBox.setText(sched.getFajr().toString());
+
 
             /*loader.setVisibility(View.GONE);
             Toast.makeText(getApplicationContext(), "s", Toast.LENGTH_SHORT).show();*/
