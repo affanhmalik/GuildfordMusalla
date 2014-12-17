@@ -4,20 +4,22 @@ package com.affanhmalik.guildfordmusalla;
  * Created by Affan on 12/12/2014.
  */
 public class DataModel {
-    // Create vars for fields
-    private int date;
-    private String fajr = "22";
-    private String zuhr = "22";
-    private String asr = "22";
-    private String maghrib = "22";
-    private String isha = "22";
 
-    public String getAsr() {
-        return asr;
+    // Create vars for fields
+    protected int date;
+    protected String fajr;
+    protected String zuhr;
+    protected String asr;
+    protected String maghrib;
+    protected String isha;
+
+
+    public void setFajr(String fajr){
+        this.fajr = fajr;
     }
 
-    public void setAsr(String asr) {
-        this.asr = asr;
+    public String getFajr(){
+        return this.fajr;
     }
 
     public int getDate() {
@@ -28,20 +30,20 @@ public class DataModel {
         this.date = date;
     }
 
-    public String getFajr() {
-        return fajr;
-    }
-
-    public void setFajr(String fajr) {
-        this.fajr = fajr;
-    }
-
     public String getZuhr() {
         return zuhr;
     }
 
     public void setZuhr(String zuhr) {
         this.zuhr = zuhr;
+    }
+
+    public String getAsr() {
+        return asr;
+    }
+
+    public void setAsr(String asr) {
+        this.asr = asr;
     }
 
     public String getMaghrib() {
@@ -59,10 +61,4 @@ public class DataModel {
     public void setIsha(String isha) {
         this.isha = isha;
     }
-
-
-
-
-
-
 }

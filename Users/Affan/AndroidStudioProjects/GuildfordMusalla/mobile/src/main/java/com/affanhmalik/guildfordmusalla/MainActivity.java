@@ -40,15 +40,16 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
+/*        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();*/
 
-//        loader = (ProgressBar) findViewById(R.id.progressBar);
+        loader = (ProgressBar) findViewById(R.id.progress1);
 
 
 
+/*
         final Button button = (Button) findViewById(R.id.getData);
-//        final TextView output = (TextView) findViewById();
+        final TextView output = (TextView) findViewById();
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +57,9 @@ public class MainActivity extends ActionBarActivity {
                 sampleDataServiceImplementation();
             }
         });
+*/
+
+        sampleDataServiceImplementation();
     }
 
 
@@ -68,18 +72,20 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        // Handle presses on the action bar items
+        switch (item.getItemId()) {
+            case R.id.action_refresh:
+                refresh();
+                return true;
+   /*         case R.id.action_settings:
+                openSettings();
+                return true;*/
+            default:
+                return super.onOptionsItemSelected(item);
         }
-
-        return super.onOptionsItemSelected(item);
     }
+
+    public void refresh() { sampleDataServiceImplementation(); }
 
     protected boolean isOnline(){
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -117,8 +123,8 @@ public class MainActivity extends ActionBarActivity {
         protected void onPreExecute() {
             /* Maybe do a toast saying "contacting server for data" */
 
-            /*loader.setVisibility(View.VISIBLE);
-            Toast.makeText(getApplicationContext(), "Beginning...", Toast.LENGTH_SHORT).show();*/
+            loader.setVisibility(View.VISIBLE);
+//            Toast.makeText(getApplicationContext(), "Beginning...", Toast.LENGTH_SHORT).show();
         }
 
         @Override
@@ -156,27 +162,21 @@ public class MainActivity extends ActionBarActivity {
             maghribTime = (TextView) findViewById(R.id.maghribTime);
             ishaTime = (TextView) findViewById(R.id.ishaTime);
 
-            /*fajrTime.setText(sched.getFajr());
+            fajrTime.setText(sched.getFajr());
             zuhrTime.setText(sched.getZuhr());
             asrTime.setText(sched.getAsr());
             maghribTime.setText(sched.getMaghrib());
-            ishaTime.setText(sched.getIsha());*/
+            ishaTime.setText(sched.getIsha());
 
-
-            fajrTime.setText("11:11");
-            zuhrTime.setText("11:11");
-            asrTime.setText("11:11");
-            maghribTime.setText("11:11");
-            ishaTime.setText("11:11");
 
 
             //Test data input
-            resultBox = (TextView) findViewById(R.id.dataSample);
-            resultBox.setText(sched.getFajr().toString());
+            /*resultBox = (TextView) findViewById(R.id.dataSample);
+            resultBox.setText(sched.getFajr().toString());*/
 
 
-            /*loader.setVisibility(View.GONE);
-            Toast.makeText(getApplicationContext(), "s", Toast.LENGTH_SHORT).show();*/
+            loader.setVisibility(View.GONE);
+//            Toast.makeText(getApplicationContext(), "s", Toast.LENGTH_SHORT).show();
         }
 
         @Override

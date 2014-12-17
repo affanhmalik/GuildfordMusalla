@@ -234,9 +234,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:gravity="center"
 
         >
-        <TextView
+        <!--<TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/dataSample"
@@ -250,6 +251,14 @@
             android:layout_gravity="end"
             android:id="@+id/getData"
             android:text="GET"
+            />-->
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/progress1"
+            android:visibility="gone"
+
             />
 
 

@@ -13,9 +13,11 @@
         android:background="@android:color/transparent"
         android:adjustViewBounds="true"
         android:maxHeight="80dp"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        />
 
-    <TextView
+    <!--<TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -23,7 +25,7 @@
         android:id="@+id/mainpage_title"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="@dimen/activity_horizontal_margin"
-        />
+        />-->
 
     <TextView
         android:layout_width="wrap_content"
@@ -209,9 +211,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
+        android:gravity="center"
 
         >
-        <TextView
+        <!--<TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/dataSample"
@@ -225,6 +228,14 @@
             android:layout_gravity="end"
             android:id="@+id/getData"
             android:text="GET"
+            />-->
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/progress1"
+            android:visibility="gone"
+
             />
 
 
